@@ -26,7 +26,9 @@ public class WebTest {
     @Test
     public void test1(){
 
-        mainPage.setFieldValue("input", "Lenovo 440");
+        mainPage.setFieldValue("input", "Lenovo 440\n");
+        mainPage.clickButton("next page");
+        mainPage.clickButton("third link");
 
         try {
             Thread.sleep((3000));

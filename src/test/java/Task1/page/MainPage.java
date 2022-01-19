@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -21,15 +23,18 @@ public class MainPage extends CommonPage {
 
     public WebElement getElement(String name){
         WebElement obj = null;
+//        List<WebElement> links;
         try {
             switch (name){
-                case "username":
-                    obj = driver.findElement(By.id("username")); break;
+                case "next page":
+                    obj = driver.findElement(By.id("pnnext")); break;
+                case "third link":
+                    obj = driver.findElement(By.id("rso")).findElement(By.xpath("./div[3]"));
+                    break;
                 case "password":
                     obj = driver.findElement(By.name("password")); break;
                 case "input":
                     obj = driver.findElement(By.xpath("//input[@name='q']")); break;
-//                    obj = driver.findElement(By.xpath("//input[@name=‘q’]")); break;
                 case "logout":
                     obj = driver.findElement(By.cssSelector(".icon-signout")); break;
                 default:
