@@ -15,7 +15,7 @@ import static org.hamcrest.core.Is.is;
 
 public class MainPage extends CommonPage {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -34,6 +34,8 @@ public class MainPage extends CommonPage {
                 case "password":
                     obj = driver.findElement(By.name("password")); break;
                 case "input":
+                    obj = driver.findElement(By.xpath("//input[@name='q']")); break;
+                case "input_yandex":
                     obj = driver.findElement(By.xpath("//input[@name='q']")); break;
                 case "logout":
                     obj = driver.findElement(By.cssSelector(".icon-signout")); break;
