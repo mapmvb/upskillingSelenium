@@ -17,6 +17,10 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class sqa50QATest {
+    /*
+    These tests were written during Q&A session for SQA50 course
+
+     */
     private static WebDriver driver;
 
     @BeforeAll
