@@ -33,11 +33,9 @@ public class SingleFileTest {
 //        enter request"lenovo 440 + details" + click button search
         driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Lenovo T440\n");
 //        on the second page
-        driver.findElement(By.id("pnnext")).click();
-//        sleepFor(2);
-        driver.findElement(By.id("pnnext")).click();
-        driver.findElement(By.id("pnnext")).click();
-//        sleepFor(2);
+//        driver.findElement(By.id("pnnext")).click();
+        driver.findElement(By.xpath("//*[@id=\"xjs\"]//td["+5+"]/a")).click();
+        sleepFor(4);
 //        find 3-d site перейти
         driver.findElement(By.id("rso")).findElements(By.xpath("//*[@id=\"rso\"]//a[h3]")).get(2).click();
 //        and find title(meta tag) of site + find H1 tag and save it with url
